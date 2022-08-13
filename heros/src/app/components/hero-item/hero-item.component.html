@@ -1,0 +1,43 @@
+<table>
+    <tr>
+        <td>
+            <h3>
+                Hero Name
+            </h3>
+        </td>
+        <td>
+            <h3>
+                {{ hero.name | uppercase }}
+            </h3>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h3>
+                Powers
+            </h3>
+        </td>
+        <td>
+            <h3>
+                {{ hero.power }}
+            </h3>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h3>
+                Rate
+            </h3>
+        </td>
+        <td>
+            <h3 class="stars">
+                {{ hero.rating }}
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <a [routerLink]="['/Hero', hero.id]">{{hero.name}} detail page</a>
+    </tr>
+</table>

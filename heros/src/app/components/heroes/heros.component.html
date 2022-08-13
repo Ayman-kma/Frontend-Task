@@ -1,0 +1,58 @@
+<!-- <p *ngFor="let Hero of heroes">{{Hero.name}}</p> -->
+<div class="container">
+    <h1>Heroes</h1>
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Self aware panel
+                </mat-panel-title>
+                <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <section class="example-section">
+                <form action="" id="filter">
+                    Search Heroes by name:
+                    <div class="search-hero">
+                        <input class="form-control" type="text" name="search" [(ngModel)]="searchText"
+                            autocomplete="off" placeholder="Search Hero Name">
+                    </div>
+                </form>
+                <mat-slide-toggle [(ngModel)]="checked" (change)="OnSortToggle()" class="example-margin" [color]="color"
+                    [checked]="checked">
+                    Slide me!{{checked}}
+                </mat-slide-toggle>
+            </section>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+
+    <h2 class="example-h2">Result</h2>
+
+
+
+    <table class="table table-striped">
+        <!-- <div *ngif="checked else elseBlock"> -->
+        <tr *ngFor="let hero of heroes | Herofilter:searchText ">
+
+            <app-hero-item [hero]="hero"></app-hero-item>
+
+
+        </tr>
+
+        <!-- </div> -->
+        <!-- <div *ngIfElse="checked else elseBlock">
+
+            <tr *ngFor="let hero of heroes | Herofilter:searchText  | sort:'id'">
+
+                <app-hero-item [hero]="hero"></app-hero-item>
+
+
+            </tr>
+        </div> -->
+
+    </table>
+</div>
+
+<!-- <app-hero-item *ngFor="let hero of heroes" [hero]="hero"></app-hero-item> -->
