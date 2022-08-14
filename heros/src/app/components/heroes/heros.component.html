@@ -5,7 +5,7 @@
         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    Self aware panel
+                    Filters
                 </mat-panel-title>
                 <mat-panel-description>
                     Currently I am {{panelOpenState ? 'open' : 'closed'}}
@@ -21,38 +21,23 @@
                 </form>
                 <mat-slide-toggle [(ngModel)]="checked" (change)="OnSortToggle()" class="example-margin" [color]="color"
                     [checked]="checked">
-                    Slide me!{{checked}}
+                    Sort By Power
                 </mat-slide-toggle>
             </section>
         </mat-expansion-panel>
     </mat-accordion>
 
 
-    <h2 class="example-h2">Result</h2>
 
 
 
     <table class="table table-striped">
-        <!-- <div *ngif="checked else elseBlock"> -->
-        <tr *ngFor="let hero of heroes | Herofilter:searchText ">
+
+        <tr *ngFor="let hero of heroes | Herofilter:searchText | sort:'name'">
 
             <app-hero-item [hero]="hero"></app-hero-item>
 
-
         </tr>
-
-        <!-- </div> -->
-        <!-- <div *ngIfElse="checked else elseBlock">
-
-            <tr *ngFor="let hero of heroes | Herofilter:searchText  | sort:'id'">
-
-                <app-hero-item [hero]="hero"></app-hero-item>
-
-
-            </tr>
-        </div> -->
 
     </table>
 </div>
-
-<!-- <app-hero-item *ngFor="let hero of heroes" [hero]="hero"></app-hero-item> -->

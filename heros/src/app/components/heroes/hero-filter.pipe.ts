@@ -10,7 +10,8 @@ export class HeroFilterPipe implements PipeTransform {
         if (!heroes || !searchText)
             return heroes
         return heroes.filter(hero =>
-            hero.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1)
+            hero.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1 ||
+            hero.power.toLowerCase().indexOf(searchText.toLowerCase()) !== -1)
     }
 
 }

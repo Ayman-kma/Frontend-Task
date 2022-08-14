@@ -12,17 +12,12 @@ import { MatAccordion } from '@angular/material/expansion';
 })
 export class HerosComponent implements OnInit {
   heroes: Hero[] = [];
-  selectedHero!: Hero;
   router!: Router;
   searchText!: "";
-  searchTerm!: "";
   checked = false;
-  Sorted = false;
   panelOpenState = false;
   color: ThemePalette = 'accent';
-  @ViewChild(MatAccordion)
-  accordion: MatAccordion = new MatAccordion;
-  SortedHeroes: Hero[] = [];
+
   constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
@@ -60,16 +55,10 @@ export class HerosComponent implements OnInit {
 
   OnSortToggle() {
     this.checked ? this.sortPower() : this.sortName()
-
-    // this.SortedHeroes = this.heroes.sort(add sorting lambda here)
   }
 
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
 
-    this.router.navigateByUrl("/hero/" + hero.id);
-  }
 
 
 }

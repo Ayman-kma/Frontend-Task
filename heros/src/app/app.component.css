@@ -1,5 +1,10 @@
-:host {
-    align-self: center;
-    background-color: aqua;
+
+.mat-typography{
     margin-left: 40px;
+
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+  }

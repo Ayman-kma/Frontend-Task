@@ -24,5 +24,5 @@
 
   }
  .mat-expansion-panel:last-of-type{
-    max-width: 50%;
-  }
+  width: 400px;
+}

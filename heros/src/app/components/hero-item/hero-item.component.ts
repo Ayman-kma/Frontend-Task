@@ -13,9 +13,7 @@ export class HeroItemComponent implements OnInit {
   constructor(private router: Router,) { }
 
 
-  viewDetails() {
-    this.router.navigate([`/item/${this.hero.name}`]);
-  }
+
   ngOnInit(): void {
   }
 
