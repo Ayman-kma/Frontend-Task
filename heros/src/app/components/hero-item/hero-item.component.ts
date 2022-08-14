@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../../Hero'
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero-item',
@@ -10,7 +9,7 @@ import { Router } from '@angular/router';
 
 export class HeroItemComponent implements OnInit {
   @Input() hero!: Hero;
-  constructor(private router: Router,) { }
+  constructor() { }
 
 
 
