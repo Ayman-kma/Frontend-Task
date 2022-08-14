@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    align-self: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#pfp{
+    border-radius: 50%;
+    width: 150px;
+
+}
+.pfp-div{
+    align-self: center;
+}
+.name{
+    margin-left: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+
+ :host {
+     align-self: center;
+    width: 100%;
+}
+.middle{
+    align-self: center;
+}

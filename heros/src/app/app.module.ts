@@ -14,6 +14,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BrowserAnimationsModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

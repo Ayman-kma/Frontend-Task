@@ -23,3 +23,6 @@
     margin-bottom:20px;
 
   }
+ .mat-expansion-panel:last-of-type{
+    max-width: 50%;
+  }

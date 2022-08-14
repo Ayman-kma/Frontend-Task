@@ -1,0 +1,12 @@
+{
+  "heros": [
+    { "id": 1, "name": "superman", "power": "flight" },
+    { "id": 2, "name": "batman", "power": "money" },
+    { "id": 3, "name": "spiderman", "power": "spidey senses" },
+    { "id": 4, "name": "hulk", "power": "big and green" },
+    { "id": 5, "name": "thor", "power": "thunder go boom" },
+    { "id": 6, "name": "antman", "power": "ant" }
+  
+  ]
+  
+}
